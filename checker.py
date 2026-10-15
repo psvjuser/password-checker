@@ -1,5 +1,6 @@
 import hashlib
 import urllib.request
+from getpass import getpass
 
 def verifier_fuite(mot_de_passe):
     empreinte = hashlib.sha1(mot_de_passe.encode("utf-8")).hexdigest().upper()
@@ -19,7 +20,7 @@ def verifier_fuite(mot_de_passe):
 
 
 print ("=== Vérificateur de mot de passe ===")
-mot_de_passe = input("Entre ton mot de passe :")
+mot_de_passe = getpass("Entre ton mot de passe :")
 longueur = len(mot_de_passe)
 print(f"Ton mot de passe contient {longueur} caractères.")
 
