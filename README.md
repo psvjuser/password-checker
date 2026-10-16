@@ -4,10 +4,20 @@ Outil en ligne de commande, écrit en Python, qui évalue la force d'un mot de p
 
 ## Fonctionnalités
 
+**Mot de passe**
 - Note de force sur 5 (longueur, majuscules, minuscules, chiffres, symboles)
 - Verdict : faible, moyen ou fort, avec des conseils
-- Vérification des fuites via l'API **Have I Been Pwned**
-- Saisie masquée du mot de passe
+- Vérification des fuites via **Have I Been Pwned** (k-anonymat)
+- Saisie masquée
+
+**Email**
+- Recherche dans plusieurs bases de fuites : **XposedOrNot** et **LeakCheck**
+- Fusion des résultats sans doublons, avec la source de chaque fuite
+- Si une source est indisponible, les autres continuent
+
+## ⚠️ Utilisation responsable
+
+Contrairement au mot de passe, l'adresse email est envoyée en entier aux services de vérification. N'utilise cet outil que sur **tes propres adresses**.
 
 ## Installation
 
